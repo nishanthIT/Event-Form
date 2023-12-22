@@ -1,0 +1,213 @@
+/* styles.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  /* background-color: #080a0d; */
+  color: #d4dbe4;
+}
+
+#header {
+  height: 100vh;
+  display: flex;    
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Added for horizontal centering */
+  padding-inline: 20px;
+  text-align: center;
+}
+.logo{
+    width: 20%;
+
+}
+section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+      url("../image/background.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+.parent {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ /* background-color: black; */
+ background: linear-gradient(#000000, #212121);
+ padding: 2rem;
+ 
+ align-items: center;
+    }
+.div1{
+    margin:5rem;
+}
+.div2{
+    margin:3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+
+}
+.div2-2{
+    margin-top: 30px;
+}
+.div2-0{
+    margin-bottom: 30px;
+}
+
+.about-event {
+    font-size: clamp(1rem,3.478 + 0.3043,3rem);
+    line-height: 2em;
+    letter-spacing: 1.5px;
+}
+.title-event{
+    font-size: 40px;
+    
+}
+
+
+.event-btn{
+    margin: 10rem;
+}
+
+
+.eventcard {
+    width: 400px;
+  }
+  
+  .eventcard-content {
+    position: relative;
+    padding: 15rem 5rem;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+  }
+  .eventcard:hover .eventcard-content {
+    transform: rotateY(180deg);
+  }
+  
+  .eventcard-front,
+  .eventcard-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .eventcard-front,
+  .eventcard-back {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    color: white;
+  }
+  .eventcard-front {
+    background-image: url(https://i.pinimg.com/564x/15/dc/30/15dc30af29194fa3b91e9de015eb646b.jpg);
+    background-color: rgba(255, 163, 42, 0.2);
+    align-items: center;
+  }
+  .eventcard-front::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border: 3px solid yellow;
+    transform: translateZ(2rem);
+  }
+  .title {
+    font-family: "Teko", sans-serif;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    line-height: 120%;
+    transform: translateZ(4.4rem);
+  }
+  .sub-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform: translateZ(3rem);
+  }
+  
+  .eventcard-back {
+    background-image: url(https://media.discordapp.net/attachments/1008571088919343124/1075699957471924316/CG_Kakashi_The_Flash_Portrait_red_and_yellow_lightning_costume__b186f92b-8566-47d3-9eef-6f82b437b15d.png?width=598&height=598);
+    transform: rotateY(180deg);
+    gap: 0.5rem;
+  }
+  .back-title {
+    font-family: "Teko", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: yellow;
+    text-transform: uppercase;
+    align-self: center;
+    transform: translateZ(2rem);
+  }
+  
+  .eventcard-back span {
+    font-weight: 600;
+    color: yellow;
+  }
+  .btn {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 2.2rem;
+    color: yellow;
+    border: 2px solid white;
+    border-radius: 100px;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+    transform: translateZ(2rem);
+    transition: 0.3s ease;
+  }
+  .btn:hover {
+    background-color: rgb(185, 164, 0);
+    color: white;
+    border: 2px solid rgb(185, 164, 0);
+  }
+  
+
+
+
+  @media (max-width: 800px) {
+    .parent {
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .logo{
+      width: 35%; /* Set the width to 100% for smaller screens */
+    }
+  }

@@ -1,0 +1,39 @@
+.place-form {
+    list-style: none;
+    margin: 0 auto;
+    padding: 40px;
+    width: 450px;
+    max-width: 40rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    
+    
+  }
+
+ body{
+   background: linear-gradient(#49494a, #464646);
+ }
+
+  .place-form h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+ 
+.place-form input {
+
+  background: transparent;
+}
+
+.place-form label {
+ 
+  background: transparent;
+ 
+}
+
+        

@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import Applayout from "./Pages/AppLayout";
+import Form from "./Pages/Form";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Success from "./Pages/Success";
+
+import Home from "./Pages/Home";
+import TokenForm from "./Pages/TokenForm";
+
 
 function App() {
+
+  const router = createBrowserRouter([
+    {element:<Applayout/>,
+     children:[
+      {
+        path:"/",
+        element:<Home/>
+        
+       
+     },
+      {
+       path:"/form",
+       element:<Form/>
+       
+     },{
+       path:"/success",
+       element:<Success/>
+     },{
+      path:"/token",
+      element:<TokenForm/>
+     }]}
+  
+  ]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router} />
+
   );
 }
 
